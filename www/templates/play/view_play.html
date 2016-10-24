@@ -1,0 +1,11 @@
+<ion-view view-title="Jugar">
+    <ion-content>
+        <ion-list >
+            <ion-item  class=" item-avatar " ng-repeat="user in users" ng-click="invitarPartida(user)"  type="item-text-wrap" href="#/main/play/playing">
+                <img ng-src="{{user.img}}">
+                <h2>{{user.name}}</h2>
+                <p>{{user.status}}</p>
+            </ion-item>
+        </ion-list> 
+    </ion-content>
+</ion-view>

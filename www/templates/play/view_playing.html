@@ -1,0 +1,42 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Jugando">
+    <ion-content scroll="false">
+        <script id="loading.html" type="text/ng-template">
+            <!-- <div class="icon ion-loading-b"></div> -->
+            <ion-spinner ng-if="message.show" class="spinner-balanced" icon="bubbles"></ion-spinner>
+            <i class="icon ion-android-close" style="font-size:40px" ng-if="!message.show"></i>
+            <br />
+            <span>{{message.status}}</span>
+        </script>
+        <div class=" row" style="margin: 30px 4px!important; ">
+               <div>
+                <img  ng-src={{miCard}}  class="col">
+            </div>
+            <div>
+                <img ng-src={{adCard}} class="col">
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-stable " style="height:189px!important ">
+        <div ng-model="carta1" ng-init="carta1=true" ng-click="carta1=false" ng-show="carta1"  class="card" style="margin: 7px 4px!important; ">
+            <div >
+                <img  ng-click="cartaclick(card1,carta1)" ng-src="{{card1.img}}" class="col">
+            </div>
+        </div>
+        <div ng-model="carta2" ng-init="carta2=true" ng-click="carta2=false" ng-show="carta2"  class="card"  style="margin: 7px 4px!important; ">
+            <div >
+                <img  ng-click="cartaclick(card2,carta2)" ng-src={{card2.img}} class="col">
+            </div>
+        </div>
+        <div class="card" ng-model="carta3" ng-init="carta3=true" ng-click="carta3=false" ng-show="carta3"  style="margin: 7px 4px!important; ">
+            <div >
+                <img  ng-click="cartaclick(card3,carta3)" ng-src={{card3.img}} class="col">
+            </div>
+        </div>
+    </div>
+</ion-view>

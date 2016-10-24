@@ -1,0 +1,23 @@
+<ion-view view-title="Ajustes">
+    <ion-content>
+        <ion-list>
+            <a class="item item-avatar" href="#">
+                <img src={{user.img}}>
+                <h2>{{user.name}}</h2>
+                <p>{{user.email}}</p>
+            </a>
+            <ion-toggle ng-model="status"    ng-true-value="'Desconectado'"
+                    ng-false-value="'Conectado'" ng-click="updateStatus(status)">
+                Ausente
+            </ion-toggle>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-happy-outline"></i> Partidas ganadas
+                <span class="badge badge-assertive">0</span>
+            </a>
+            <a class="item item-icon-left " ng-click="logout()">
+                <i class="icon ion-log-out"></i> Cerrar Sesion
+            </a>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>

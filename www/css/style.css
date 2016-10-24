@@ -1,0 +1,23 @@
+/* Empty. Add your own CSS if you like */
+width-150-px {
+    width: 200px;
+}
+.text-center {
+    text-align: center!important;
+}
+.top-30-pc {
+    margin-top: 20%;
+}
+.centerButton{
+  margin: 5%;
+  width: 90%;
+}
+.width-150-px {
+    width: 200px;
+}
+.color-white{
+	color: white;
+}
+.loading{
+  background-color: rgba(46, 44, 44, 0.5) !important;
+}

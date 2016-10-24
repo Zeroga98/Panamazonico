@@ -1,0 +1,39 @@
+|
+<ion-view view-title="Panamazonia">
+    <ion-content class="padding">
+        <div class="row">
+            <a ng-model="flora" ng-init="flora=true" ng-click="flora=true" class="col button button-block button-stable">
+               Flora
+            </a>
+            <a ng-model="flora" ng-click="flora=false" class="col button button-block button-stable">
+               Fauna
+            </a>
+        </div>
+        <div class="padding ">
+            <ion-slide-box active-slide="myActiveSlide " show-pager="false ">
+                <ion-slide ng-show="flora" ng-repeat=" card in cardFlora ">
+                    <div class="list card ">
+                        <div class="item item-image ">
+                            <img ng-src="{{card.img}}">
+                        </div>
+                        <a class="item item-icon-left assertive " href="# ">
+                            <i class="icon ion-flash "></i> {{card.poder}}
+                        </a>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <ion-slide-box active-slide="myActiveSlide " show-pager="false ">
+                <ion-slide ng-show="!flora" ng-repeat=" card in cardFauna ">
+                    <div class="list card ">
+                        <div class="item item-image ">
+                            <img ng-src="{{card.img}}">
+                        </div>
+                        <a class="item item-icon-left assertive " href="# ">
+                            <i class="icon ion-flash "></i> {{card.poder}}
+                        </a>
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+    </ion-content>
+</ion-view>
